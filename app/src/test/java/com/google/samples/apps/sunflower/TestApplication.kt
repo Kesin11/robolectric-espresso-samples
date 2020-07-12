@@ -1,12 +1,10 @@
 package com.google.samples.apps.sunflower
 
 import android.app.Application
-import androidx.work.Configuration
 import androidx.work.testing.WorkManagerTestInitHelper
 import com.google.samples.apps.sunflower.data.AppDatabase
 import com.google.samples.apps.sunflower.data.GardenPlantingRepository
 import com.google.samples.apps.sunflower.data.PlantRepository
-import org.robolectric.shadows.ShadowLog
 
 class TestApplication : Application() {
 

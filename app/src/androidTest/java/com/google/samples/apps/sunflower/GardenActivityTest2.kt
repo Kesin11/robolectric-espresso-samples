@@ -1,6 +1,5 @@
 package com.google.samples.apps.sunflower
 
-
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.idling.concurrent.IdlingThreadPoolExecutor
 import androidx.test.ext.junit.rules.activityScenarioRule
@@ -82,4 +81,3 @@ class GardenActivityTest2 {
                 .assertPlanted("Eggplant")
     }
 }
-
