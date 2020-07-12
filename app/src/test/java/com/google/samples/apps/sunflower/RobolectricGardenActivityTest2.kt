@@ -1,6 +1,5 @@
 package com.google.samples.apps.sunflower
 
-
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.idling.concurrent.IdlingThreadPoolExecutor
@@ -14,7 +13,6 @@ import com.google.samples.apps.sunflower.data.AppDatabase
 import com.google.samples.apps.sunflower.page.MyGardenPage
 import com.google.samples.apps.sunflower.viewmodels.PlantDetailViewModel
 import kotlinx.coroutines.asCoroutineDispatcher
-import kotlinx.coroutines.asExecutor
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -94,6 +92,4 @@ class RobolectricGardenActivityTest2 {
                 .goMyGarden()
                 .assertPlanted("Eggplant")
     }
-
 }
-

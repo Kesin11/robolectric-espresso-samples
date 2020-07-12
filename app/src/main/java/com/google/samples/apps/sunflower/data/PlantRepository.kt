@@ -22,7 +22,7 @@ import androidx.annotation.VisibleForTesting
  * Repository module for handling data operations.
  */
 class PlantRepository private constructor(
-        @VisibleForTesting internal var plantDao: PlantDao
+    @VisibleForTesting internal var plantDao: PlantDao
 ) {
 
     fun getPlants() = plantDao.getPlants()

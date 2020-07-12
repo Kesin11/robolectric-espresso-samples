@@ -76,6 +76,6 @@ allprojects {
 spotless {
     kotlin {
         target "**/*.kt"
-        ktlint(ktlintVersion).userData(['max_line_length' : '150'])
+        ktlint(ktlintVersion).userData(['max_line_length' : '200'])
     }
 }

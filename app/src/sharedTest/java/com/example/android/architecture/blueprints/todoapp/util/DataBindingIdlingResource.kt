@@ -105,7 +105,7 @@ class DataBindingIdlingResource : IdlingResource {
  * Sets the activity from an [ActivityScenario] to be used from [DataBindingIdlingResource].
  */
 fun DataBindingIdlingResource.monitorActivity(
-        activityScenario: ActivityScenario<out FragmentActivity>
+    activityScenario: ActivityScenario<out FragmentActivity>
 ) {
     activityScenario.onActivity {
         this.activity = it
