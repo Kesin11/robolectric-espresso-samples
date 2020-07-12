@@ -1,0 +1,35 @@
+name: Android CI
+
+on:
+  push
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      JAVA_TOOL_OPTIONS: "-Xmx1024m"
+      GRADLE_OPTS: "-Dorg.gradle.daemon=false -Dorg.gradle.workers.max=2"
+      TERM: dumb
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: 1.8
+    - name: Download Dependencies
+      run: ./gradlew dependencies
+
+    - name: Run JVM Tests & Lint
+      run: ./gradlew check
+      continue-on-error: true
+      
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
+      continue-on-error: true
+      with:
+      # Artifact name
+        name: test_reports
+        # A file, directory or wildcard pattern that describes what to upload
+        path: app/build/test-results
